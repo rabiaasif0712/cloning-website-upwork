@@ -131,13 +131,7 @@ select {
 .category i {
   font-size: 20px;
 }
-/* icons*/
-.card i {
-  color: #16b817;
-  font-size: 36px;
-}
-a {
-  color: #222;
+a {  color: #222;
   text-decoration: none;
 }
 .nav-container {
@@ -265,11 +259,15 @@ a {
   height: 32px;
   object-fit: contain;
 }
-h3 {
-  font-size: 2.5rem;
+.category-heading {
+  max-width: 1220px;
+  margin: 0 auto 28px;
+  font-size: clamp(2.1rem, 3vw, 4rem);
   font-weight: 400;
-  margin-left: 3.3rem;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
 }
+
 .div-flex {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -277,6 +275,11 @@ h3 {
   max-width: 1220px;
   margin: 24px auto 0;
 }
+
+.second-row {
+  margin-top: 22px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -288,6 +291,15 @@ h3 {
   background-color: #fff;
   box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
 }
+
+.card i {
+  display: inline-block;
+  color: #16b817;
+  font-size: 28px;
+  line-height: 1;
+  transform: scale(0.96);
+}
+
 .card h3 {
   margin: 22px 0 0;
   font-size: 20px;
