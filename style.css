@@ -17,7 +17,23 @@ body {
 
 body {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+textarea,
+select,
+span {
+  font-weight: inherit;
 }
 
 button,
@@ -131,7 +147,8 @@ select {
 .category i {
   font-size: 20px;
 }
-a {  color: #222;
+a {
+  color: #222;
   text-decoration: none;
 }
 .nav-container {
