@@ -104,6 +104,8 @@ a {
 
 /* Search bar */
 .search-box {
+  flex: 0 0 260px;
+  margin-left: auto;
   width: 260px;
   height: 40px;
   border: 1px solid #d1d5db;
@@ -162,42 +164,98 @@ a {
   font-size: 20px;
 }
 /* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fff;
+}
+
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  gap: 24px;
+  height: 60px;
+  padding: 0 24px;
 }
+
+.logo {
+  display: flex;
+  flex: 0 0 93px;
+  align-items: center;
+}
+
+.logo-wordmark {
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  line-height: 1;
+}
+
+.nav-links {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
 .nav-links ul {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 36px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.nav-links a i {
+  font-size: 15px;
+}
+
+.login-signup {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 24px;
+}
+
 .login-signup a {
-  margin-right: 14px;
   color: #222;
   text-decoration: none;
+  font-size: 14px;
 }
+
 .login-signup button {
-  background-color: #16b817;
+  min-height: 36px;
+  padding: 0 24px;
+  background-color: #108a00;
   color: #fff;
   border: none;
-  padding: 12px 20px;
   border-radius: 30px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
 }
 .line {
   display: flex;
   align-items: center;
-  max-width: 1220px;
+  width: min(1224px, calc(100% - 48px));
+  min-height: 58px;
+  max-width: 1224px;
   justify-content: space-between;
   gap: 16px;
-  background-color: #88eec7;
+  background: linear-gradient(100deg, #eff8c9 0%, #cef6d7 100%);
   border-radius: 30px;
-  margin: 20px auto;
+  margin: 52px auto 20px;
   padding: 12px 24px;
 }
 .line p {
@@ -210,7 +268,7 @@ a {
   align-items: flex-start;
   justify-content: center;
   gap: 24px;
-  width: min(1220px, calc(100% - 48px));
+  width: min(1224px, calc(100% - 48px));
   min-height: 580px;
   margin: 0 auto;
   padding: 64px;
@@ -1000,6 +1058,7 @@ a {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 10px 12px;
+    height: auto;
     padding: 12px 16px;
   }
 
