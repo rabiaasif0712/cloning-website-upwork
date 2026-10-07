@@ -847,6 +847,9 @@ nav {
 .compare-plans a:hover {
   text-decoration: underline;
 }
+.merge-section {
+  background-image: url(https://acquisition-ui-assets.static-upwork.com/brontes/reviews/reviews-graphic.jpg);
+}
 .section5 {
   position: relative;
   display: grid;
