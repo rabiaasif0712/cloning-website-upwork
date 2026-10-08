@@ -334,7 +334,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  max-width: 1220px;
+  width: min(1224px, calc(100% - 48px));
+  max-width: 1224px;
   margin: 24px auto 0;
   margin-bottom: 70px;
 }
@@ -348,7 +349,8 @@ nav {
 }
 /* Service cards */
 .category-heading {
-  max-width: 1220px;
+  width: min(1224px, calc(100% - 48px));
+  max-width: 1224px;
   margin: 0 auto 28px;
   font-size: clamp(2.1rem, 3vw, 4rem);
   font-weight: 400;
@@ -360,7 +362,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 26px;
-  max-width: 1220px;
+  width: min(1224px, calc(100% - 48px));
+  max-width: 1224px;
   margin: 24px auto 0;
 }
 
@@ -518,7 +521,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  max-width: 1220px;
+  width: min(1224px, calc(100% - 48px));
+  max-width: 1224px;
   margin: 64px auto 28px;
 }
 .work h3 {
@@ -549,7 +553,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
-  width: min(1220px, calc(100% - 48px));
+  width: min(1224px, calc(100% - 48px));
   margin: 0 auto 80px;
 }
 .section2-card {
@@ -709,7 +713,7 @@ nav {
 }
 .section4 {
   position: relative;
-  padding: 32px 24px 0;
+  padding: 24px 24px 0;
   background: #fff;
 }
 .section4::before {
@@ -734,23 +738,25 @@ nav {
 }
 .section4 .top-content {
   max-width: 900px;
-  margin: 0 auto 48px;
+  margin: 0 auto 28px;
   text-align: center;
 }
 .section4 .top-content h2 {
-  margin: 0 0 38px;
-  font-size: clamp(32px, 4vw, 40px);
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 32px);
   font-weight: 500;
+  line-height: 1.2;
 }
 .section4 .top-content p {
-  font-size: 17px;
+  font-size: 15px;
+  line-height: 1.4;
 }
 .section4 .bottom-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 420px));
   justify-content: center;
   align-items: stretch;
-  gap: 18px;
+  gap: 14px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -759,7 +765,7 @@ nav {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 24px 32px;
+  padding: 20px 24px;
   border: 1px solid #dedede;
   border-radius: 18px;
   background: #fff;
@@ -779,38 +785,38 @@ nav {
   font-size: 12px;
 }
 .section4 .plan-card h4 {
-  margin: 0 0 6px;
-  font-size: 21px;
+  margin: 0 0 4px;
+  font-size: 19px;
   font-weight: 500;
 }
 .section4 .plan-card > p {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: #727272;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.45;
 }
 .section4 .plan-card > p:nth-of-type(2) {
-  min-height: 40px;
-  margin-top: 16px;
+  min-height: 0;
+  margin-top: 8px;
 }
 .section4 .plan-card hr {
-  margin: 16px 0 18px;
+  margin: 12px 0;
   border: 0;
   border-top: 1px solid #e4e4e4;
 }
 .section4 .plan-card h5 {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   color: #666;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 .section4 .plan-card h5 + div p {
   position: relative;
-  margin: 0 0 10px;
-  padding-left: 28px;
+  margin: 0 0 7px;
+  padding-left: 24px;
   color: #686868;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.4;
 }
 .section4 .plan-card h5 + div p::before {
   position: absolute;
@@ -1033,6 +1039,33 @@ nav {
 }
 
 @media (max-width: 1024px) {
+  .nav-container {
+    gap: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .nav-links ul {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .login-signup {
+    gap: 12px;
+  }
+
+  .login-signup button {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   .div-flex {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1059,42 +1092,47 @@ nav {
 @media (max-width: 760px) {
   .nav-container {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "logo account"
+      "links links";
     align-items: center;
-    gap: 10px 12px;
+    gap: 10px;
     height: auto;
     padding: 12px 16px;
   }
 
   .logo {
-    grid-column: 1;
+    grid-area: logo;
   }
 
   .nav-links {
-    grid-column: 1 / -1;
-    width: 100%;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .nav-links::-webkit-scrollbar {
-    display: none;
-  }
-
-  .nav-links ul {
-    gap: 16px;
-    white-space: nowrap;
-  }
-
-  .search-box {
-    grid-column: 2;
+    grid-area: links;
     width: 100%;
     min-width: 0;
   }
 
+  .nav-links ul {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-links a i {
+    font-size: 13px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
   .login-signup {
-    grid-column: 3;
+    grid-area: account;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1111,7 +1149,6 @@ nav {
   }
 
   .category-heading {
-    width: min(100%, 760px);
     margin: 0 auto 20px;
     padding: 0 18px;
     font-size: clamp(1.9rem, 6vw, 2.8rem);
@@ -1121,7 +1158,6 @@ nav {
   .div-flex {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
-    width: min(calc(100% - 24px), 1220px);
   }
 
   .card {
@@ -1145,12 +1181,13 @@ nav {
   }
 
   .work .toggle {
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
     justify-content: space-between;
   }
 
   .work .toggle button {
+    flex: 1;
     padding: 8px 14px;
     font-size: 0.95rem;
   }
@@ -1225,22 +1262,22 @@ nav {
 
 @media (max-width: 520px) {
   .nav-container {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
     column-gap: 8px;
   }
 
-  .nav-links {
-    grid-column: 1 / -1;
+  .nav-links ul {
+    gap: 4px 9px;
   }
 
-  .search-box {
-    grid-column: 1;
-    width: 100%;
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .nav-links a i {
+    font-size: 12px;
   }
 
   .login-signup {
-    grid-column: 2;
     margin-left: 0;
     gap: 8px;
   }
@@ -1252,7 +1289,7 @@ nav {
   .line {
     flex-wrap: wrap;
     align-items: flex-start;
-    margin: 12px;
+    margin: 12px auto 20px;
     padding: 12px 16px;
     border-radius: 16px;
     font-size: 14px;
@@ -1282,7 +1319,6 @@ nav {
 
   .div-flex {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: min(calc(100% - 20px), 1220px);
     gap: 12px;
   }
 
@@ -1327,7 +1363,7 @@ nav {
   }
 
   .section4 .plan-card {
-    padding: 22px 20px;
+    padding: 16px 18px;
   }
 
   .testimonial-card {
@@ -1346,21 +1382,16 @@ nav {
 }
 
 @media (max-width: 360px) {
-  .nav-container {
-    grid-template-columns: minmax(0, 1fr) auto;
+  .nav-links ul {
+    gap: 7px;
   }
 
-  .logo,
-  .nav-links {
-    grid-column: 1 / -1;
+  .nav-links a {
+    font-size: 10px;
   }
 
-  .search-box {
-    grid-column: 1;
-  }
-
-  .login-signup {
-    grid-column: 2;
+  .nav-links a i {
+    font-size: 11px;
   }
 
   .div-flex {
