@@ -245,6 +245,29 @@ nav {
   font-size: 14px;
   font-weight: 600;
 }
+
+@media (max-width: 1280px) {
+  .nav-container {
+    gap: 16px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .nav-links ul {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .login-signup {
+    margin-left: auto;
+  }
+}
+
 .line {
   display: flex;
   align-items: center;
